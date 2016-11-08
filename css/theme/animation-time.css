@@ -4,6 +4,7 @@
  */
 @import url(../../lib/font/league-gothic/league-gothic.css);
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Fira+Mono:400,700');
 /**
  * Solarized colors by Ethan Schoonover
  */
@@ -22,10 +23,10 @@ body {
  }
 
 .reveal {
-  font-family: "Lato", sans-serif;
+  font-family: 'Fira Mono', monospace;
   font-size: 36px;
   font-weight: normal;
-  color: #93a1a1; 
+  color: #ebebeb; 
   background: #1572B6;
   background: -moz-radial-gradient(center, ellipse cover, #1572b6 0%, #1572b6 75%, #00588e 100%);
   background: -webkit-radial-gradient(center, ellipse cover, #1572b6 0%,#1572b6 75%,#00588e 100%);
@@ -53,7 +54,7 @@ body {
 .reveal h6 {
   margin: 0 0 20px 0;
   color: #eee8d5;
-  font-family: "League Gothic", Impact, sans-serif;
+  font-family: 'Amatic SC', cursive;
   font-weight: normal;
   line-height: 1.2;
   letter-spacing: normal;
@@ -299,6 +300,60 @@ body {
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
 
 /*********************************************
+ * BG ELEMENTS
+ *********************************************/
+
+.slides > section::before {
+  content: '';
+  display: block;
+  width: 313px;
+  height: 175px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-200%, -180%);
+  background: url(../../images/cloud-a.svg) no-repeat 50% 50%;
+  background-size: contain;
+}
+
+.slides > section::after {
+  content: '';
+  display: block;
+  width: 259px;
+  height: 166px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(150%, 100%);
+  background: url(../../images/cloud-b.svg) no-repeat 50% 50%;
+  background-size: contain;
+}
+
+.slides > section:first-child::before,
+.slides > section:first-child::after {
+  display: none;
+}
+
+.slides h1,
+.slides h2 {
+  display: inline-block;
+  position: relative;
+}
+
+.slides h1::before,
+.slides h2::before {
+  content: '';
+  display: block;
+  width: 180%;
+  height: 180%;
+  position: absolute;
+  top: -40%;
+  left: -40%;
+  background: url(../../images/lights.svg) no-repeat 50% 50%;
+  background-size: contain;
+}
+
+/*********************************************
  * ANIMATIONS
  *********************************************/
 @keyframes animation-light {
@@ -311,7 +366,19 @@ body {
   0% {transform: translate(10%, 0); }
 }
 
- #layer6 {
+@keyframes animation-cloud-a {
+  0% {transform: translate(-190%, -180%); }
+  0% {transform: translate(-210%, -180%); }
+}
+
+@keyframes animation-cloud-b {
+  0% {transform: translate(140%, 100%); }
+  0% {transform: translate(160%, 100%); }
+}
+
+ #layer6,
+ .slides h1::before,
+ .slides h2::before {
    transform-origin: center center 2px;
    animation: .15s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite alternate animation-light; 
  }
@@ -329,4 +396,24 @@ body {
  #path4251 {
    transform-origin: center center 2px;
    animation: 4s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate animation-cloud;
+ }
+
+ .slides > section::before {
+   transform-origin: center center 2px;
+   animation: 5s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate animation-cloud-a;
+ }
+
+ .slides > section::after {
+   transform-origin: center center 2px;
+   animation: 6s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate animation-cloud-b;
+ }
+
+/*********************************************
+ * OTHERS
+ *********************************************/
+ pre code {
+   border-radius: 10px;
+ }
+ code {
+   color: yellow;
  }

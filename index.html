@@ -87,17 +87,17 @@
 							id="layer5"
 							inkscape:label="cloud">
 							<path
-							style="fill:none;fill-rule:evenodd;stroke:#175e7d;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+							style="fill:none;fill-rule:evenodd;stroke:#26599e;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
 							d="m 472.46896,303.46543 c -58.8118,-12.48024 62.35082,-57.686 73.77894,-59.59068 8.37961,-1.3966 41.26685,-11.22971 49.6589,-2.83765 7.47787,7.47787 -1.80256,38.69203 5.6753,31.21416 13.95965,-13.95964 90.21906,-38.06105 106.41193,-5.6753 24.44967,48.89933 -32.48328,43.34904 -11.3506,53.91538 33.68378,16.84189 12.0206,57.48609 -12.76943,72.36011 -43.82269,26.29361 -62.37293,-8.45755 -79.45424,-25.53886 -2.83766,-2.83765 -5.3793,6.00602 -8.51296,8.51295 -21.32487,17.0599 -101.58733,16.74333 -116.34371,-12.76943 -4.2702,-8.54041 21.28239,-20.95266 21.28239,-28.37651 0,-7.96276 -53.39173,16.57656 -21.28239,-28.37652"
 							id="path4247"
 							inkscape:connector-curvature="0" />
 							<path
-							style="fill:none;fill-rule:evenodd;stroke:#175e7d;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+							style="fill:none;fill-rule:evenodd;stroke:#26599e;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
 							d="m 390.17708,197.06809 c 8.08973,56.91994 -77.51683,19.34498 -70.94129,12.76943 16.31821,-16.31821 -26.72261,45.6916 -49.6589,48.24007 -24.65776,2.73975 -41.59326,-22.70121 -58.17185,-22.70121 -27.77163,0 10.92484,44.09706 -78.03542,8.51296 -15.34334,-6.13734 -63.431242,-44.81544 -52.496554,-66.68481 8.260153,-16.52031 28.245734,-19.54155 43.983604,-15.60708 7.84034,1.96008 22.70121,16.59458 22.70121,8.51295 0,-18.50025 -37.66506,-58.14539 15.60708,-79.454238 27.94728,-11.17891 64.88655,-5.6192 90.80485,9.931778 7.12444,4.27466 20.95349,16.20367 24.12004,24.12004 2.11506,5.28765 -4.27615,17.02591 1.41882,17.02591 3.96432,0 8.74504,-21.20503 21.28239,-17.02591 30.39552,10.13184 26.95769,25.8109 26.95769,41.14594 0,7.62596 15.46659,-5.24919 22.70121,-2.83765 24.11279,8.0376 36.65011,9.43578 39.72712,34.05182 z"
 							id="path4249"
 							inkscape:connector-curvature="0" />
 							<path
-							style="fill:none;fill-rule:evenodd;stroke:#175e7d;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+							style="fill:none;fill-rule:evenodd;stroke:#26599e;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
 							d="m 215.87443,449.68193 c 11.13088,13.31301 115.02016,4.44702 97.89898,-29.79534 -20.18256,-40.36511 -92.22367,5.93381 -92.22367,1.41883 0,-22.9807 -47.99149,-22.9498 -65.26598,-5.6753 -4.64591,4.64591 15.80846,19.96424 9.93178,17.0259 -15.48684,-7.74342 -8.41856,20.62017 7.09413,28.37652 18.19702,9.09851 95.57771,-0.29016 52.49654,-5.6753"
 							id="path4251"
 							inkscape:connector-curvature="0" />
@@ -390,9 +390,86 @@
 						</g>
 					</svg>
 				</section>
-				<section>Slide 2</section>
-				<section>Slide 2</section>
-				<section>Slide 2</section>
+				<section>
+					<h1>CSS <br>vs<br> JavaScript</h1>
+				</section>
+				<section>
+					<h1>#Transitions</h1>
+				</section>
+				<section>
+					<pre><code class="hljs css">
+  transition: property-name duration timing-function delay; 
+					</code></pre>
+					<pre><code class="hljs css">
+  transition: height 2s linear 1s; 
+					</code></pre>
+				</section>
+				<section>
+					<h2>.timing-function</h2>
+				</section>
+				<section>
+					<h1>!Demo</h1>
+				</section>
+				<section>
+					<h1>#Animations</h1>
+				</section>
+				<section>
+					<pre><code class="hljs css">
+  animation: duration
+             timing-function
+             delay 
+             iteration-count 
+             direction 
+             fill-mode 
+             play-state 
+             name; 
+					</code></pre>
+					<pre><code class="hljs css">
+  animation: 2s ease-in 1s 3 reverse both paused slide;
+					</code></pre>
+				</section>
+				<section>
+					<h2>#Timeline</h2>
+					<pre><code class="hljs css">
+  @keyframes timeline-name {
+    from {}
+    to {}
+  }
+					</code></pre>
+				</section>
+				<section>
+					<h1>!Demo</h1>
+				</section>
+				<section>
+					<pre><code class="hljs css">
+  @keyframes timeline-name {
+    0% {}
+    50% {}
+    100% {}
+  }
+					</code></pre>
+				</section>
+				<section>
+					<h1>!Demo</h1>
+				</section>
+				<section>
+					<h1>transition <br>vs<br> animation</h1>
+				</section>
+				<section>
+					<h2>#Cross-browser</h2>
+				</section>
+				<section>
+					<h2>#tips</h2>
+					<br>
+					<ul>
+						<li>Cuidado a nomear os keyframes;</li>
+						<li>Evitar o uso de <code>all</code> em <code>transition</code>;</li>
+						<li>Usar <code>transform</code>;</li>
+					</ul>
+				</section>
+				<section>
+					<h1>!obrigado</h1>
+				</section>
 			</div>
 		</div>
 
