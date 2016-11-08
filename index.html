@@ -391,21 +391,45 @@
 					</svg>
 				</section>
 				<section>
-					<h1>CSS <br>vs<br> JavaScript</h1>
-				</section>
-				<section>
 					<h1>#Transitions</h1>
 				</section>
 				<section>
 					<pre><code class="hljs css">
-  transition: property-name duration timing-function delay; 
+  transition: property-name duration timing-function delay;
 					</code></pre>
 					<pre><code class="hljs css">
-  transition: height 2s linear 1s; 
+  transition: height 2s linear 1s;
 					</code></pre>
 				</section>
 				<section>
 					<h2>.timing-function</h2>
+					<br><br>
+					<pre><code class="hljs css">
+  transition-timing-function: timing-function;
+					</code></pre>
+					<pre><code class="hljs css">
+  transition-timing-function: ease-in;
+					</code></pre>
+					<pre><code class="hljs css">
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+					</code></pre>
+				</section>
+				<section>
+					<img src="images/curva-de-bezier.svg" alt="Curva de Bézier Cúbica" class="big-image" />
+					<p class="fragment"><a href="http://easings.net" target="_blank">easings.net</a></p>
+				</section>
+				<section>
+					<h1>!Demo</h1>
+				</section>
+				<section>
+					<h2>.transform-origin</h2>
+					<br><br>
+					<pre><code class="hljs css">
+  transform-origin: x y x;
+					</code></pre>
+					<pre><code class="hljs css">
+  transform-origin: center top;
+					</code></pre>
 				</section>
 				<section>
 					<h1>!Demo</h1>
@@ -417,15 +441,15 @@
 					<pre><code class="hljs css">
   animation: duration
              timing-function
-             delay 
-             iteration-count 
-             direction 
-             fill-mode 
-             play-state 
-             name; 
+             delay
+             iteration-count
+             direction
+             fill-mode
+             play-state
+             name;
 					</code></pre>
 					<pre><code class="hljs css">
-  animation: 2s ease-in 1s 3 reverse both paused slide;
+  animation: 2s ease-in 1s 3 reverse both paused timeline-name;
 					</code></pre>
 				</section>
 				<section>
@@ -456,13 +480,37 @@
 					<h1>transition <br>vs<br> animation</h1>
 				</section>
 				<section>
-					<h2>#Cross-browser</h2>
+					<h1>#Cross-browser</h1>
+				</section>
+				<section>
+
+
+					<h2>.vendor-prefix</h2>
+					<pre><code class="hljs css">
+  @-moz-keyframes timeline-name {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @-webkit-keyframes timeline-name {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes timeline-name {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+					</code></pre>
+				</section>
+				<section>
+					<h2>.JavaScript</h2>
 				</section>
 				<section>
 					<h2>#tips</h2>
 					<br>
 					<ul>
-						<li>Cuidado a nomear os keyframes;</li>
+						<li>Cuidado com os nomes dos keyframes;</li>
 						<li>Evitar o uso de <code>all</code> em <code>transition</code>;</li>
 						<li>Usar <code>transform</code>;</li>
 					</ul>

@@ -26,7 +26,7 @@ body {
   font-family: 'Fira Mono', monospace;
   font-size: 36px;
   font-weight: normal;
-  color: #ebebeb; 
+  color: #ebebeb;
   background: #1572B6;
   background: -moz-radial-gradient(center, ellipse cover, #1572b6 0%, #1572b6 75%, #00588e 100%);
   background: -webkit-radial-gradient(center, ellipse cover, #1572b6 0%,#1572b6 75%,#00588e 100%);
@@ -376,11 +376,9 @@ body {
   0% {transform: translate(160%, 100%); }
 }
 
- #layer6,
- .slides h1::before,
- .slides h2::before {
+ #layer6 {
    transform-origin: center center 2px;
-   animation: .15s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite alternate animation-light; 
+   animation: .15s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite alternate animation-light;
  }
 
  #path4249 {
@@ -398,22 +396,29 @@ body {
    animation: 4s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate animation-cloud;
  }
 
- .slides > section::before {
-   transform-origin: center center 2px;
-   animation: 5s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate animation-cloud-a;
- }
-
- .slides > section::after {
-   transform-origin: center center 2px;
-   animation: 6s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate animation-cloud-b;
- }
-
 /*********************************************
  * OTHERS
  *********************************************/
- pre code {
-   border-radius: 10px;
- }
- code {
-   color: yellow;
- }
+a {
+  color: #e3ceab !important;
+}
+
+pre,
+pre code {
+ border-radius: 10px;
+}
+
+code {
+ background: #3F3F3F;
+ color: #e3ceab;
+ border-radius: 5px;
+ display: inline-block;
+ padding: 0 5px !important;
+}
+
+.big-image {
+ border: none !important;
+ background: none !important;
+ box-shadow: none !important;
+ transform: scale(2);
+}
